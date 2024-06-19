@@ -1,0 +1,280 @@
+/*colores: (#baf5efe5) - ¿verde oscuro? = #0a3f38 - otra tonalidad (#008170)
+azul oscuro: #151536*/
+
+/*configuracion manual*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #6d6d8f;
+    position: relative;     /* (relative) con el position le das las cordenadas, sigueindo el numero de left, right, top*/
+    width: 100%;
+    padding: 110px;
+
+    border-bottom: 5px solid #0f0f50;
+}
+
+
+.padre{
+    margin-top: 30px;
+}
+
+.titulo{
+    position: relative;
+}
+
+.subtitulo{
+    position: relative;
+} 
+
+
+nav{
+    position: absolute;
+    top:15px;
+    right:15px
+}
+nav li{
+    list-style:none;
+    display: inline;
+}
+
+/*para que no quede todo pegado*/
+article{
+    padding: 40px 5px 40px 5px;
+}
+
+/*color de fondo*/
+body{
+    background-color:#aeb0ce;
+}
+
+/*titulo*/
+h1{
+    text-align: center;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 200px; /*en este punto, hay un error entre el bootstrap y el css. No pude agrandar el titulo.*/
+    font-weight: 400;
+    color:#2d2e41;
+}
+
+/*subtitulo*/
+.subtitulo{
+    text-align: center;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #282c5a;
+}
+
+
+/*links de navegación*/
+
+ol{ /*selector etiqueta*/
+    text-align: center;
+    list-style: none;
+}
+
+
+.navegacion_interna{ /*selector por clase*/
+    text-decoration: none;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size:medium;
+    color:#25165c;
+}
+
+.navegacion_externa{
+    text-align: center;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    font-style: italic;
+    text-decoration: none;
+    color: #242455;
+}
+
+/*parrafos*/
+p{
+    text-align: center;
+    color: #171a42;
+    text-align: center;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size:18px;
+}
+
+.recomendaciones{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+}
+
+/*a modo de subtitulo*/
+.titulosalbumes{
+    text-align: center;
+    font-family: "Almendra", serif;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: #7d85df;
+    color: #282c5a;
+}
+
+/*selector ID, es unico. Irrepetible*/
+#album_rust{
+    text-align: center;
+    font-family: "Jacquard 24", system-ui;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: 200;
+    background-color:#6e7296;
+    color:#030324;
+}
+
+/*cards y contenedor limite*/
+
+.contenedor-limite{
+    background-color: #bcbfe2;
+    max-width: 1000px;
+    margin: 0 auto;
+    /*padding-top: 20px;*/
+    padding: 20px 10px 20px 10px;
+    /*border: 3px solid #070a27;*/
+}
+
+.contenedor-limite p{
+    padding: 20px 6px 20px 6px;
+}
+
+.card_uno{
+
+    background-color: #5b64b6;
+    width: 320px; /*ancho*/
+    /*border: 5px solid; (el grosor)*/
+    border-radius: 10px;
+    padding: 20px;
+
+    text-align: center;
+    margin: 0 auto; /*centrarlo con relacion a la card*/
+}
+.card_uno img{
+    width: 100%;
+}
+.card_uno p{
+    font-style: italic;
+}
+
+.card_uno ol{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.card_dos{
+    background-color: #5b64b6;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+
+    text-align: center;
+    margin: 0 auto;
+}
+.card_dos img{
+    padding-top: 10px;
+    width: 90%;
+}
+.card_dos p{
+    font-style: italic;
+}
+.card_dos ol{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.card_tres{
+    background-color: #5b64b6;
+    width: 300px;
+    border-radius: 10px;
+    padding: 15px;
+
+    text-align: center;
+    margin: 0 auto;
+}
+.card_tres img{
+    padding-top: 20px;
+    width: 80%;
+}
+.card_tres p{
+    font-style: italic;
+}
+.card_tres ol{
+    padding: 10px;
+}
+
+
+.card_cuatro{
+    background-color: #5b64b6;
+    width: 400px;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    text-align: center;
+    margin: 0 auto;
+}
+.card_cuatro img{
+    padding-top: 24px;
+    width: 80%;
+}
+.card_cuatro p{
+    font-style: italic;
+}
+.card_cuatro ol{
+    margin-top: 15px;
+    padding: 10px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .titulo{
+        display: block;
+        flex-direction:row;
+        font-size: 20px;
+    }
+    h1{
+        font-size: 80px;
+    }
+
+    .subtitulo{
+        display: block;
+        font-size: 15px;
+    }
+
+    nav li{
+        display: block;
+    }
+
+
+} /*se activa cuando la pantalla tiene menos de 700 pixeles, sino sigue igual*/
+
+
+/*-----Pseudo clases-----*/
+nav li :hover{
+    background-color: #b283bb;
+    font-size: 20px; 
+}
+
+/*--------------CARRUSEL DE IMAGENES----------------------*/
+.contenedor_carrusel{
+    margin: 0 auto;
+    max-width: 1100px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

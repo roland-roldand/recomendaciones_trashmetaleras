@@ -1,0 +1,258 @@
+/*configuracion manual*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #a5add680;
+    display: flex;
+}
+
+/*titulo: (selector tipo etiqueta)*/
+.titulo{
+    color: #263ec48c; /*(#381c10)*/
+    text-align: center;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+.subt{
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px ;
+    padding-bottom: 20px;
+
+    color: #485bc7c7;
+}
+
+
+nav{
+    position: absolute;
+    top:15px;
+    right:15px
+}
+
+
+nav li{
+    list-style:none;
+    display: inline;
+}
+
+/*color de fondo*/
+body{
+    background-color: #dfdddd;
+}
+
+/*subtitulo: (selector tipo clase)*/
+h3{
+    color: #5a4c4c;
+    text-align: center;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+
+.subtitulo{
+    background-color: #a09a99;
+    text-align: center;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    text-decoration: none;
+    color: #4c4c63;
+}
+
+
+/*links de navegacion*/
+a{
+    color: #313030;
+    text-decoration: none;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size:medium;
+}
+
+
+/*parrafos*/
+p{
+    color:#3d3d5a;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size:medium;
+    font-size: 18px;
+}
+
+.contenedor_limite_A{
+    background-color: #e4dfdf;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: justify;
+    border: 5px solid ;
+}
+
+/*card*/
+.contenedor_limite{
+    background-color: #353566;
+    max-width: 500px;
+   
+    margin: 0 auto;
+    padding: 25px;
+    text-align: justify;
+    border: 5px solid ;
+}
+
+section{
+    margin:50px 25px 50px;
+}
+
+.texto_dos{
+    font-size: 18px;
+    text-align: center;
+    color: #4b3931;
+}
+
+
+
+h4{
+    color: rgb(33, 65, 54);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+/*----------FLEX BLOX-----------------*/
+.contenedor_limite_Z{
+    background-color: #9ca2e6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+                   
+}
+.contenedor_limite_Z p{
+    padding: 20px 6px 20px 6px;
+}
+
+.padre{ /*contenedor con el que trabaja la box*/
+    background-color: #6d6e79;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /*meridianos*/
+}
+
+.card{
+    width: 300px; /*ancho*/
+    height: 260px; /*alto*/
+    border: 5px solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.card img{
+    padding-top: 24px;
+    width: 80%;
+    object-fit: cover;
+}
+.card p{
+    padding-top: 10px;
+    font-style: italic;
+}
+.card h2{
+    font-size: 20px;
+}
+
+/*3er contedor; card con texto a la derecha*/
+.contenedor-limite_tres{
+    background-color: #8690fc;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor-limite_tres p{
+   text-align: right;
+   margin: 20px;
+}
+
+.padre_tres{
+    background-color: #a7ace2;
+    padding: 20px;
+}
+.card_tres{
+    background-color: #7b85f7;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    padding: 20px;
+
+    text-align: center;
+}
+.card_tres img{
+    width: 70%;
+}
+.card_tres p{
+    text-align: justify;
+    padding: 10px;
+    font-style: italic;
+}
+
+footer{ flex-direction: column; flex-wrap: wrap; align-items: center; background-color: #a5add680; display: flex; padding: 40px;}
+.foot{ font-size: 15px; font-style: italic;}
+
+
+/*----------Puntos de quiebre-----------*/
+
+
+@media screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .titulo{
+        display: block;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .subt{
+        display: block;
+        font-size: 20px;
+    }
+
+    nav li{
+        display: block;
+    }
+
+    .padre_tres{
+        display: block;
+    }
+
+
+} /*se activa cuando la pantalla tiene menos de 700 pixeles, sino sigue igual*/
+
+
+/*-----Pseudo clases-----*/
+nav li :hover{
+    background-color: #263ec48c;
+    font-size: 20px; 
+}

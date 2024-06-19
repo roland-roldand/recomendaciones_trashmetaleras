@@ -1,0 +1,217 @@
+
+/*paleta de colores roñosos: Fondo (#D4ECB9), Titulo (#30A57Z), Subtitulo (#2DB483), Links de navegacion (#3d9678)
+Parrafos (##347272), 1er Parrafo (#33643d) --- #9ce0c7*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+} /*confuguracion manual*/
+
+
+header{
+    background-color: #9ce0c7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+    gap: 20px;
+}
+
+.titulo{
+    margin-top: 70px;
+    padding: 10px;
+}
+
+.subt{
+    margin: 0;
+    padding: 15px;
+}
+
+nav{
+    position: absolute;
+    top:15px;
+    right:15px
+}
+nav li{
+    list-style:none;
+    display: inline;
+}
+
+/*para que no quede todo pegado*/
+article{
+    padding: 20px 5px 20px 5px;
+}
+section{
+    padding: 30px 5px 30px 5px;   
+}
+
+/*color de fondo*/
+body{
+    background-color: #D4ECB9;
+}
+
+/*Titulo*/
+h1{
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: 45px;
+    text-align: center;
+    color:#30a57a;
+}
+
+/*Subtitulo*/
+h3{
+    text-align: center;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    color:#2DB483;
+}
+
+/*links de navegacion*/
+a{
+    text-decoration: none;
+    font-family: "Cabin Condensed", sans-serif;
+    font-size:medium;
+    color:#3d9678;
+}
+
+/*párrafos*/
+.parrafo_uno{
+    text-align: center;
+    font-size: 18px;
+    color:#33643d;
+
+    padding: 20px 5px 20px 5px;
+}
+
+p{
+    font-family: "Cabin Condensed", sans-serif;
+    text-align: center;
+    font-size: 17px;
+    color:#347272;
+}
+
+/*contenedor limite*/
+
+.contenedor_limite_A{
+    background-color: #aee4a9;
+    border-radius: 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 20px;
+}
+
+/*--------grilla--------*/
+
+.parent {
+    max-width: 1000px; 
+    padding: 15px;
+
+    margin: 0 auto;
+    background-color: #83bd7e;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+
+    background-color: #62bb84;
+    padding: 10px;
+}
+    
+.div1 {
+    margin: 10px;
+    grid-area: 1 / 1 / 2 / 4;
+}
+.primer_div{
+    text-align: center;
+    background-color: #a2dba6;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.div2 { 
+    margin: 10px;
+    grid-area: 2 / 1 / 3 / 3;
+}
+.div2 p{
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.div3 { 
+    margin: 10px;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.card_grilla{
+    background-color: #47b48e;
+    width: 300px;
+    
+    border-radius: 5px;
+    padding: 10px;
+
+    text-align: center;
+}
+.card_grilla h3{
+    padding-top: 10px;
+    font-style: normal;
+    color: #33643d;
+}
+.card_grilla img{
+    padding-top: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .titulo{
+        display: block;
+        flex-direction:row;
+        font-size: 20px;
+    }
+    h1{
+        font-size: 80px;
+    }
+
+    .subt{
+        display: block;
+        font-size: 15px;
+    }
+    
+    nav li{
+        display: block;
+    }
+
+    .parent{
+        display: block;
+    }
+
+
+} /*se activa cuando la pantalla tiene menos de 700 pixeles, sino sigue igual*/
+
+
+
+/*-----Pseudo clases-----*/
+nav li :hover{
+    background-color: #b8ecc8;
+    font-size: 20px; 
+}
